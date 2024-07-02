@@ -1,825 +1,177 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0"> 
-	<title>My Portfolio</title> 
-	
-	<link rel="stylesheet" href="style.css"> 
-	
-</head> 
+    <!-- ==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-<body> 
-	<!-- Navbar header section -->
-	<header class="header"> 
-		<nav class="navbar"> 
-			<div class="logo"> 
-				<h2 class="logo-heading">Vaishnav Aron</h2> 
-			</div> 
-			<div class="hamburger" id="hamburger"> 
-				<i class="fas fa-bars hamburger-icon"></i> 
-				<i class="fas fa-times cross-icon"></i> 
-			</div> 
-			<div class="menu"> 
-				<ul class="menu-list"> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#home"> 
-							Home 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#portfolio"> 
-							Portfolio 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#about"> 
-							About 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#services"> 
-							Services 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#contact"> 
-							Contact Me 
-						</a> 
-					</li> 
-				</ul> 
-			</div> 
-		</nav> 
-	</header> 
+    <!-- ====  REMIXICON CDN ==== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-	<!-- Main hero banner -->
-	<section id="home" class="hero"> 
-		<div class="intro"> 
-			<div class="headings"> 
-				<h3 class="greet-heading">Hello, I'm</h3> 
-				<h1 class="my-heading">Vaishnav Aron</h1> 
-				<h4 class="sub-heading"> 
-					A Software Engineer with 3 years of Experience. 
-				</h4> 
-			</div> 
-			<div class="intro-buttons"> 
-				
-				<button class="btn ghost-btn">Get Resume</button> 
-			</div> 
-		</div> 
-	</section> 
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== HEADER ==== -->
+    <header class="container header">
+      <!-- ==== NAVBAR ==== -->
+      <nav class="nav">
+        <div class="logo">
+          <h2>Devkit.</h2>
+        </div>
 
-	<!-- Portfolio Section -->
-	<section class="portfolio" id="portfolio"> 
-		<div class="portfolio-heading"> 
-			<h1 class="my-heading text-center">Featured Portfolio</h1> 
-		</div> 
-		<div class="portfolio-content"> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						<div class="image"> 
-							
-						</div> 
-						<h3 class="greet-heading blue-text">Web Design</h3> 
-						<p class="small-para blue-text">Designing</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Web Development 
-						</h3> 
-						<p class="small-para blue-text">Development</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text">SEO</h3> 
-						<p class="small-para blue-text">Optimization</p> 
-					</div> 
-				</div> 
-			</div> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Content Writing 
-						</h3> 
-						<p class="small-para blue-text">Writing</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							WordPress Dev 
-						</h3> 
-						<p class="small-para blue-text"> 
-							Content Management System 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Video Editing 
-						</h3> 
-						<p class="small-para blue-text">Editing</p> 
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-	</section> 
+        <div class="nav_menu" id="nav_menu">
+          <button class="close_btn" id="close_btn">
+            <i class="ri-close-fill"></i>
+          </button>
 
-	<!-- About Section -->
-	<section id="about" class="about"> 
-		<div class="about-text"> 
-			<h1 class="my-heading">About Me</h1> 
-			<p class="lead-para"> 
-				Hi, I'm Vaishnav Aron, an enthusiastic and dedicated web developer just starting my journey in the world of web development. I recently completed [a relevant course or degree, e.g., a coding bootcamp or a degree in Computer Science], where I honed my skills in HTML, CSS, and JavaScript.During my studies, I worked on several projects that helped me build a solid foundation in both front-end and back-end development. 
-				I am particularly passionate about creating clean, responsive, and user-friendly websites.As a beginner, I am constantly learning and exploring new technologies to enhance my skill set. I enjoy solving problems and am always eager to take on new challenges that push me to grow as a developer.When I'm not coding, I love [your hobbies or interests], which often inspire my creativity and keep me motivated.I am excited to start my career in web development and am looking forward to contributing to innovative projects. Feel free to check out my portfolio and get in touch if you’re interested in collaborating or just want to talk about web development!
-			</p> 
-			<p> 
-				I am particularly passionate about creating clean, responsive, and user-friendly websites.As a beginner, I am constantly learning and exploring new technologies to enhance my skill set. I enjoy solving problems and am always eager to take on new challenges that push me to grow as a developer.When I'm not coding, I love [your hobbies or interests], which often inspire my creativity and keep me motivated.I am excited to start my career in web development and am looking forward to contributing to innovative projects. Feel free to check out my portfolio and get in touch if you’re interested in collaborating or just want to talk about web development!
-			</p> 
-		</div> 
-		
-	</section> 
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">account</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">about</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">service</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#" class="nav_menu_link">contact</a>
+            </li>
+          </ul>
+        </div>
 
-	<!-- Services Section -->
-	<section class="services" id="services"> 
-		<div class="services-heading"> 
-			<h1 class="my-heading text-center">My Services</h1> 
-		</div> 
-		<div class="services-content"> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-paint-brush"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text">Web Design</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fa-solid fa-code"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Web Development 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-chart-line"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text">SEO</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-			</div> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-quote-left"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Content Writting 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation 
-							of an application that works over the 
-							internet i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation of an 
-							application that works over the internet i.e. 
-							websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fab fa-wordpress-simple"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							WordPress Dev 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation 
-							of an application that works over the 
-							internet i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-video"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Video Editing 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-	</section> 
+        <button class="toggle_btn" id="toggle_btn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </header>
 
-	<!-- Contact me section -->
-	<section class="contact" id="contact"> 
-		<div class="contact-heading"> 
-			<h1 class="my-heading text-center">Contact Me</h1> 
-		</div> 
-		<div class="contact-content"> 
-			<div class="contact-form-container"> 
-				<h1 class="greet-heading">Get In Touch</h1> 
-				<form class="contact-form"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Name"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Email"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Phone"> 
-					<textarea class="form-controls"
-							placeholder="Write your message"
-							name="message" id="" cols="30"
-							rows="10"> 
-					</textarea> 
-					<input class="form-btn btn common-btn"
-						type="submit" value="Send Message"> 
-				</form> 
-			</div> 
-			
-		</div> 
-	</section> 
+    <section class="wrapper">
+      <div class="container">
+        <div class="grid-cols-2">
+          <div class="grid-item-1">
+            <h1 class="main-heading">
+              Welcome to <span>Devkit.</span>
+              <br />
+              Develop anything.
+            </h1>
+            <p class="info-text">
+              Build a beautiful, modern website with flexible components built
+              from scratch.
+            </p>
 
-	<!-- Footer section -->
-	<footer class="footer"> 
-		<div class="footer-content text-center"> 
-			<h4> 
-				Copyright © 2023 All rights reserved 
-				
-			</h4> 
-			<div class="social-links"> 
-				<div class="footer-menu"> 
-					<ul class="footer-menu-list"> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-facebook-f"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-twitter"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-instagram"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-linkedin-in"></i> 
-							</a> 
-						</li> 
-					</ul> 
-				</div> 
-			</div> 
-		</div> 
-	</footer> 
+            <div class="btn_wrapper">
+              <button class="btn view_more_btn">
+                view all pages <i class="ri-arrow-right-line"></i>
+              </button>
 
-	<script src= 
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-		integrity= 
-"sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"> 
-	</script> 
-	<script src="script.js"></script> 
-</body> 
+              <button class="btn documentation_btn">documentation</button>
+            </div>
+          </div>
+          <div class="grid-item-2">
+            <div class="team_img_wrapper">
+              <img src="./img/team.svg" alt="team-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</html>
-<!DOCTYPE html> 
-<html lang="en"> 
+    <section class="wrapper">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="grid-cols-3">
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span class="title">Built for developers </span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                ratione facilis animi voluptas exercitationem molestiae.
+              </p>
+            </div>
+          </div>
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span class="title">Designed to be modern</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                ipsum esse corrupti. Quo, labore debitis!
+              </p>
+            </div>
+          </div>
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0"> 
-	<title>My Portfolio</title> 
-	
-	<link rel="stylesheet" href="style.css"> 
-	
-</head> 
+          <div class="grid-col-item">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+            <div class="featured_info">
+              <span class="title">Documentation for everything</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                nostrum voluptate totam ipsa corrupti vero!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<body> 
-	<!-- Navbar header section -->
-	<header class="header"> 
-		<nav class="navbar"> 
-			<div class="logo"> 
-				<h2 class="logo-heading">Vaishnav Aron</h2> 
-			</div> 
-			<div class="hamburger" id="hamburger"> 
-				<i class="fas fa-bars hamburger-icon"></i> 
-				<i class="fas fa-times cross-icon"></i> 
-			</div> 
-			<div class="menu"> 
-				<ul class="menu-list"> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#home"> 
-							Home 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#portfolio"> 
-							Portfolio 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#about"> 
-							About 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#services"> 
-							Services 
-						</a> 
-					</li> 
-					<li class="menu-list-items"> 
-						<a class="links" href="#contact"> 
-							Contact Me 
-						</a> 
-					</li> 
-				</ul> 
-			</div> 
-		</nav> 
-	</header> 
+    <footer></footer>
 
-	<!-- Main hero banner -->
-	<section id="home" class="hero"> 
-		<div class="intro"> 
-			<div class="headings"> 
-				<h3 class="greet-heading">Hello, I'm</h3> 
-				<h1 class="my-heading">Vaishnav Aron</h1> 
-				<h4 class="sub-heading"> 
-					A Software Engineer with 3 years of Experience. 
-				</h4> 
-			</div> 
-			<div class="intro-buttons"> 
-				
-				<button class="btn ghost-btn">Get Resume</button> 
-			</div> 
-		</div> 
-	</section> 
-
-	<!-- Portfolio Section -->
-	<section class="portfolio" id="portfolio"> 
-		<div class="portfolio-heading"> 
-			<h1 class="my-heading text-center">Featured Portfolio</h1> 
-		</div> 
-		<div class="portfolio-content"> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						<div class="image"> 
-							
-						</div> 
-						<h3 class="greet-heading blue-text">Web Design</h3> 
-						<p class="small-para blue-text">Designing</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Web Development 
-						</h3> 
-						<p class="small-para blue-text">Development</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text">SEO</h3> 
-						<p class="small-para blue-text">Optimization</p> 
-					</div> 
-				</div> 
-			</div> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Content Writing 
-						</h3> 
-						<p class="small-para blue-text">Writing</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							WordPress Dev 
-						</h3> 
-						<p class="small-para blue-text"> 
-							Content Management System 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card port-card"> 
-						
-						<h3 class="greet-heading blue-text"> 
-							Video Editing 
-						</h3> 
-						<p class="small-para blue-text">Editing</p> 
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-	</section> 
-
-	<!-- About Section -->
-	<section id="about" class="about"> 
-		<div class="about-text"> 
-			<h1 class="my-heading">About Me</h1> 
-			<p class="lead-para"> 
-				Hi, I'm Vaishnav Aron, an enthusiastic and dedicated web developer just starting my journey in the world of web development. I recently completed [a relevant course or degree, e.g., a coding bootcamp or a degree in Computer Science], where I honed my skills in HTML, CSS, and JavaScript.During my studies, I worked on several projects that helped me build a solid foundation in both front-end and back-end development. 
-				I am particularly passionate about creating clean, responsive, and user-friendly websites.As a beginner, I am constantly learning and exploring new technologies to enhance my skill set. I enjoy solving problems and am always eager to take on new challenges that push me to grow as a developer.When I'm not coding, I love [your hobbies or interests], which often inspire my creativity and keep me motivated.I am excited to start my career in web development and am looking forward to contributing to innovative projects. Feel free to check out my portfolio and get in touch if you’re interested in collaborating or just want to talk about web development!
-			</p> 
-			<p> 
-				I am particularly passionate about creating clean, responsive, and user-friendly websites.As a beginner, I am constantly learning and exploring new technologies to enhance my skill set. I enjoy solving problems and am always eager to take on new challenges that push me to grow as a developer.When I'm not coding, I love [your hobbies or interests], which often inspire my creativity and keep me motivated.I am excited to start my career in web development and am looking forward to contributing to innovative projects. Feel free to check out my portfolio and get in touch if you’re interested in collaborating or just want to talk about web development!
-			</p> 
-		</div> 
-		
-	</section> 
-
-	<!-- Services Section -->
-	<section class="services" id="services"> 
-		<div class="services-heading"> 
-			<h1 class="my-heading text-center">My Services</h1> 
-		</div> 
-		<div class="services-content"> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-paint-brush"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text">Web Design</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fa-solid fa-code"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Web Development 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-chart-line"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text">SEO</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-			</div> 
-			<div class="my-row"> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-quote-left"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Content Writting 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation 
-							of an application that works over the 
-							internet i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation of an 
-							application that works over the internet i.e. 
-							websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fab fa-wordpress-simple"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							WordPress Dev 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining of websites. 
-							It includes aspects such as web design, 
-							web publishing, web programming, and 
-							database management. It is the creation 
-							of an application that works over the 
-							internet i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-				<div class="my-col"> 
-					<div class="my-card"> 
-						<div class="icon"> 
-							<i class="fas fa-video"></i> 
-						</div> 
-						<h3 class="greet-heading blue-text"> 
-							Video Editing 
-						</h3> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-						<p class="small-para"> 
-							Web development refers to the creating, 
-							building, and maintaining 
-							of websites. It includes aspects such as 
-							web design, web publishing, 
-							web programming, and database management. 
-							It is the creation of an 
-							application that works over the internet 
-							i.e. websites. 
-						</p> 
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-	</section> 
-
-	<!-- Contact me section -->
-	<section class="contact" id="contact"> 
-		<div class="contact-heading"> 
-			<h1 class="my-heading text-center">Contact Me</h1> 
-		</div> 
-		<div class="contact-content"> 
-			<div class="contact-form-container"> 
-				<h1 class="greet-heading">Get In Touch</h1> 
-				<form class="contact-form"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Name"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Email"> 
-					<input class="form-controls" type="text"
-						placeholder="Your Phone"> 
-					<textarea class="form-controls"
-							placeholder="Write your message"
-							name="message" id="" cols="30"
-							rows="10"> 
-					</textarea> 
-					<input class="form-btn btn common-btn"
-						type="submit" value="Send Message"> 
-				</form> 
-			</div> 
-			
-		</div> 
-	</section> 
-
-	<!-- Footer section -->
-	<footer class="footer"> 
-		<div class="footer-content text-center"> 
-			<h4> 
-				Copyright © 2023 All rights reserved 
-				
-			</h4> 
-			<div class="social-links"> 
-				<div class="footer-menu"> 
-					<ul class="footer-menu-list"> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-facebook-f"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-twitter"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-instagram"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-linkedin-in"></i> 
-							</a> 
-						</li> 
-					</ul> 
-				</div> 
-			</div> 
-		</div> 
-	</footer> 
-
-	
-	<script src="script.js"></script> 
-</body> 
-
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./script.js" defer></script>
+  </body>
 </html>
